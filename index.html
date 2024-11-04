@@ -9,37 +9,18 @@
 </head>
 
 <body>
-    <h1>Búsqueda de Usuario en GitHub</h1>
-    <input type="text" id="github-username" placeholder="Ingrese nombre de usuario en GitHub">
-    <button id="buscar-btn">Buscar</button>
 
-    <script>
-        document.getElementById("buscar-btn").addEventListener("click", buscarUsuario);
-        async function buscarUsuario() {
-            const username = document.getElementById('github-username').value
-
-            if (username) {
-                try {
-                    const response = await fetch(`https://api.github.com/users/${username}`)
-                    if (!response.ok) {
-                        console.error('Usuario no encontrado')
-                        return;
-                    }
-                    const data = await response.json()
-                    console.log("Nombre:", data.name)
-                    console.log("Número de repositorios:", data.public_repos)
-
-                    console.log("Avatar:")
-                    console.log("%c ", `font-size: 100px; background: url(${data.avatar_url}) no-repeat; background-size: contain;`)
-
-                } catch (error) {
-                    console.error("Error al buscar el usuario:", error)
-                }
-            } else {
-                console.error("Por favor ingrese un nombre de usuario")
-            }
-        }
-    </script>
+    <div class="container">
+        <h1>Búsqueda de Usuario en GitHub</h1>
+        <input type="text" id="github-username" placeholder="Ingrese nombre de usuario en GitHub">
+        <button id="buscar-btn">Buscar</button>
+        <div class="user-info" id="user-info" style="display: none;">
+            <h2 id="user-name"></h2>
+            <p id="user-repos"></p>
+            <img id="user-avatar" src="" alt="Avatar del usuario">
+        </div>
+        <script src="main.js">
+        </script>
 </body>
 
 </html>
