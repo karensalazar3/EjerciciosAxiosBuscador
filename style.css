@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #ebebf0;
+  }
+
+  h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    text-align: center;
+    background-color: hwb(180 99% 0%);
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #github-username {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+
+  #buscar-btn {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    margin: bottom 15px; ;
+    background-color: hsl(318, 100%, 52%);
+    border: 1px solid  #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  #buscar-btn:hover {
+    background-color: #080808;
+  }
+
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }
